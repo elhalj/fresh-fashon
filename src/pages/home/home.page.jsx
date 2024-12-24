@@ -60,12 +60,26 @@ function HomePage() {
                 {/* carte du jour */}
                 <div className="GiftCard">
                     <h3>obternir carte simple</h3>
-                    <h2>donner une carte</h2>
+                    <h1>donner une carte</h1>
                     <div>
                         <a href="">obtenir maintenant</a>
                     </div>
                 </div>
                 {/* carte du jour */}
+
+                {/* Tendance */}
+                <div className="TendanceCard">
+                    <div className="TendanceText">
+                        <p>Tendance Tops</p>
+                    </div>
+                    <div className="Tcards" style={{display:"flex",justifyContent:"space-between"}}>
+                        <div className="Tcard1" style={{textAlign:"center", alignContent:"center"}}><a href=""><img src="https://www.loding.fr/cdn/shop/files/pull-col-v-laine-merinos-vert-pour-homme.jpg?v=1702574494" alt="" style={{height:"300px", width:"300px"}}/></a></div>
+                        <div className="Tcard2" style={{textAlign:"center", alignContent:"center"}}><a href=""><img src="https://www.loding.fr/cdn/shop/files/pull-col-v-laine-merinos-vert-pour-homme.jpg?v=1702574494" alt="" style={{height:"300px", width:"300px"}}/></a></div>
+                        <div className="Tcard3" style={{textAlign:"center", alignContent:"center"}}><a href=""><img src="https://www.loding.fr/cdn/shop/files/pull-col-v-laine-merinos-vert-pour-homme.jpg?v=1702574494" alt="" style={{height:"300px", width:"300px"}}/></a></div>
+                        <div className="Tcard3" style={{textAlign:"center", alignContent:"center"}}><a href=""><img src="https://www.loding.fr/cdn/shop/files/pull-col-v-laine-merinos-vert-pour-homme.jpg?v=1702574494" alt="" style={{height:"300px", width:"300px"}}/></a></div>
+                    </div>
+                </div>
+                {/* Tendance */}
             </main>
         </>
     );
