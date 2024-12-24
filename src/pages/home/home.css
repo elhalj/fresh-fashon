@@ -1,0 +1,202 @@
+.NavLink {
+    background-color: rgb(240, 235, 230);
+    width: 100%;
+    /* height: 60px; */
+    display: flex;
+    justify-content: space-between;
+    /* text-align: center; */
+    /* margin-top: 10px; */
+    position: fixed;
+    z-index: 10;
+
+    nav {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+
+        .Lien {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            align-items: center;
+            align-content: center;
+            width: 50%;
+
+            .Logo {
+                /* width: 60px; */
+                position: relative;
+                -webkit-border-radius: 30px;
+                -moz-border-radius: 30px;
+                -ms-border-radius: 30px;
+                -o-border-radius: 30px;
+                border-radius: 30px;
+                align-content: center;
+
+                a {
+                    color: rgb(68, 115, 187);
+                    text-decoration: none;
+                    font-family: cursive;
+                    font-size: 40px;
+                }
+            }
+
+            ul {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .Search {
+            padding: 10px;
+
+            input {
+                width: 440px;
+                border: 1px solid black;
+                padding: 3px;
+                background-color: rgb(240, 235, 230);
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                -ms-border-radius: 20px;
+                -o-border-radius: 20px;
+                border-radius: 20px;
+
+                /* ::after{
+                    content: 'la';
+                    color: #282c34;
+                    width: 10px;
+                    height: 10px;
+                    display: block;
+                } */
+            }
+        }
+    }
+}
+
+/* main content */
+main {
+    .FirstDiv {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        /* border: 1px solid black; */
+        margin-top: 40px;
+
+        .F1 {
+            background: url("https://img.freepik.com/photos-gratuite/homme-africain_1303-4398.jpg");
+            object-fit: cover;
+            background-size: cover;
+            resize: both;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 48%;
+            height: 912px;
+            /* border: 1px solid black; */
+            align-content: center;
+            color: white;
+            /* size: 100vh; */
+
+            button {
+                background-color: rgb(59, 148, 175);
+                width: 200px;
+                height: 40px;
+                border: none;
+                color: white;
+                -webkit-border-radius: 30px;
+                -moz-border-radius: 30px;
+                -ms-border-radius: 30px;
+                -o-border-radius: 30px;
+                border-radius: 30px;
+                -webkit-filter: drop-shadow(2px 2px 5px rgb(30, 49, 49));
+                filter: drop-shadow(2px 2px 5px rgb(30, 49, 49));
+
+            }
+        }
+
+        .F2 {
+            background: url("https://i.pinimg.com/736x/06/ce/42/06ce42d0ad68057de40af79a5df2a75b.jpg");
+            object-fit: cover;
+            background-size: cover;
+            resize: both;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 48%;
+            height: 912px;
+            /* border: 1px solid black; */
+            align-content: center;
+            color: white;
+            /* size: 100vh; */
+
+            button {
+                background-color: rgb(59, 148, 175);
+                width: 200px;
+                height: 40px;
+                border: none;
+                color: white;
+                -webkit-border-radius: 30px;
+                -moz-border-radius: 30px;
+                -ms-border-radius: 30px;
+                -o-border-radius: 30px;
+                border-radius: 30px;
+                -webkit-filter: drop-shadow(2px 2px 5px rgb(30, 49, 49));
+                filter: drop-shadow(2px 2px 5px rgb(30, 49, 49));
+
+            }
+        }
+    }
+
+    /* carte du jour */
+    .GiftCard {
+        background-color: rgb(29, 100, 73);
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        position: relative;
+
+        div {
+            background-color: aliceblue;
+            width: 180px;
+            height: 40px;
+            align-content: center;
+            text-align: center;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+            border-radius: 30px;
+            outline: invert black;
+
+            a{
+                text-decoration: none;
+                color: black;
+                font-family:'Times New Roman', Times, serif;
+                font-size: 20px;
+            }
+        }
+
+    }
+}
