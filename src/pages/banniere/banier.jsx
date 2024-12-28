@@ -4,7 +4,7 @@ import './banier.css'
 
 import React, { useState } from 'react'
 
-export default function Banier() {
+export default function Banier({fil}) {
 
     const [trending, setTrending] = useState(Homeproducts);
 
@@ -16,6 +16,8 @@ export default function Banier() {
         })
         setTrending(filterProduct);
     }
+
+    
 
     const allTrending = () => {
         setTrending(Homeproducts)

@@ -1,27 +1,33 @@
 
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import './App.css';
-import Home from './pages/home';
 import HomePage from './pages/home/home.page';
 import Acceuil from './pages/home/acceuil.page';
-import Banier from './pages/banniere/banier';
+import Catalogue from './pages/catalogue/catalogue';
+import { useMemo } from 'react';
+import Footer from './pages/footer/foot';
 
 
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Acceuil />,
-    exact: true,
-    children:[
-      {
-        path:'/',
-        element: <HomePage />,
-      }
-    ]
-  }
-])
+
 function App() {
+  const router = useMemo(() => createBrowserRouter([
+    {
+      path: "/",
+      element: <Acceuil />,
+      exact: true,
+      children:[
+        {
+          path:'/',
+          element:<HomePage />
+        },
+        {
+          path:'catalogue',
+          element: <Catalogue />,
+        }
+      ]
+    }
+  ]),[])
   return (
     
       <RouterProvider router={router} />

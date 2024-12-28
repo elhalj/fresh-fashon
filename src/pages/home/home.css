@@ -3,11 +3,13 @@
     width: 100%;
     /* height: 60px; */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     /* text-align: center; */
     /* margin-top: 10px; */
-    position: fixed;
+    /* position: fixed; */
     z-index: 10;
+    position: sticky;
+    top: 1px;
 
     nav {
         width: 100%;
@@ -26,8 +28,8 @@
             width: 50%;
 
             .Logo {
-                /* width: 60px; */
-                position: relative;
+                width: 60px;
+                /* position: relative; */
                 -webkit-border-radius: 30px;
                 -moz-border-radius: 30px;
                 -ms-border-radius: 30px;
@@ -40,6 +42,17 @@
                     text-decoration: none;
                     font-family: cursive;
                     font-size: 40px;
+
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        -webkit-border-radius: 30px;
+                        -moz-border-radius: 30px;
+                        -ms-border-radius: 30px;
+                        -o-border-radius: 30px;
+                        border-radius: 30px;
+                        object-fit: cover;
+                    }
                 }
             }
 
@@ -70,9 +83,11 @@
 
             input {
                 width: 440px;
-                border: 1px solid black;
+                /* border: 1px solid black; */
+                outline: none;
                 padding: 3px;
-                background-color: rgb(240, 235, 230);
+                text-align: center;
+                /* background-color: rgb(240, 235, 230); */
                 -webkit-border-radius: 20px;
                 -moz-border-radius: 20px;
                 -ms-border-radius: 20px;
@@ -87,10 +102,18 @@
                     display: block;
                 } */
             }
-            .ser{
+
+            .ser {
                 display: inline;
                 margin-right: 10px;
-}
+                font-size: 25px;
+                cursor: pointer;
+                /* background-color: aqua; */
+            }
+
+            .ser:hover {
+                color: rgb(8, 184, 184);
+            }
 
             .log-con {
                 cursor: pointer;
@@ -104,8 +127,67 @@
             .log-con:hover {
                 color: aquamarine;
             }
+
+            .pan {
+                margin-left: 20px;
+                cursor: pointer;
+                -webkit-transition: 0.5s;
+                -moz-transition: 0.5s;
+                -ms-transition: 0.5s;
+                -o-transition: 0.5s;
+                transition: 0.5s;
+            }
+
+            .pan:hover {
+                color: aquamarine;
+            }
         }
     }
+}
+
+@media (max-width: 800px) {
+    .NavLink {
+        
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+        align-items: center;
+        
+    
+        nav {
+            /* width: 50%; */
+            flex-direction: column;
+    
+            .Lien {
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+    
+                .Logo {
+                    width: 100%;
+                    text-align: center;
+                    align-content: center;
+    
+                }
+    
+                ul {
+                    flex-direction: column;
+                    width: 50%;
+    
+                }
+            }
+    
+            .Search {
+                /* flex-direction: column; */
+                width: 100%;
+                input {
+                    width: 200px;
+    
+                }
+            }
+        }
+    }
+    
 }
 
 /* main content */
@@ -246,5 +328,24 @@ main {
             background-color: rgb(39, 114, 180);
         }
 
+    }
+    .TendanceCard{
+        width: 100%;
+
+        .Tcards{
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 800px) {
+        .TendanceCard{
+            display: flex;
+            flex-direction: column;
+
+            .Tcards{
+                flex-direction: column;
+                justify-content: space-around;
+            }
+        }
     }
 }
