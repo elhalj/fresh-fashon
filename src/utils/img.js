@@ -3,7 +3,7 @@
 const Homeproducts = [
     {
         id:1,
-        nom:"chausssure",
+        nom:"chaussure",
         type:"top",
         image:"https://media.istockphoto.com/id/1279108197/fr/photo/vari%C3%A9t%C3%A9-de-chaussures-confortables-de-mode-de-femmes-de-toutes-saisons-sur-un-fond-l%C3%A9ger-vue.jpg?s=612x612&w=0&k=20&c=UZqf007bciqUY_KI1kC1v3yGwrM_ZvWZvla0moau7vQ="
     },
