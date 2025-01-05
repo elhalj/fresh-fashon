@@ -76,6 +76,7 @@ function Acceuil() {
             {/* <HomePage/> */}
             {/* <Footer /> */}
             <Outlet />
+            <Footer />
         </>
     );
 }

@@ -60,7 +60,6 @@ export default function Catalogue() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </>
     )
 }

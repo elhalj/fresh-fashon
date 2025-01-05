@@ -60,7 +60,6 @@ function HomePage() {
                     </div>
                 </div>
                 <Banier />
-                <Footer />
             </main>
         </>
     );
