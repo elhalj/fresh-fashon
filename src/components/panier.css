@@ -1,0 +1,27 @@
+.panier{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 50px;
+    padding: 20px;
+    border-radius: 10px;
+    /* border: 1px solid #000; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.panier .panier__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 50px;
+    padding: 20px;
+    gap: 20px;
+    /* border: 1px solid #000; */
+    width: 50%;
+    height: 500px;
+    background: rgba(183, 164, 187, 0.295);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}

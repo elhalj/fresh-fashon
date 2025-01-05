@@ -67,7 +67,7 @@ function Acceuil() {
 
                         {/* logo panier */}
                         <div className="pan">
-                            <FaBasketShopping />
+                            <Link to="/panier"><FaBasketShopping /></Link>
                         </div>
                         {/* logo panier */}
                     </div>

@@ -9,6 +9,7 @@ import Footer from './pages/footer/foot';
 import CatalogueId from './pages/catalogue/CatalogueId';
 import SignUp from './pages/signUp/SignUp';
 import Login from './pages/login/Login';
+import Panier from './components/Panier';
 
 
 
@@ -39,6 +40,10 @@ function App() {
         {
           path:'signUp',
           element: <SignUp />,
+        },
+        {
+          path:'panier',
+          element:<Panier />
         }
       ]
     }
