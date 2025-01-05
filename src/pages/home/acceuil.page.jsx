@@ -58,8 +58,10 @@ function Acceuil() {
                         </form>
                         {/* logo connexion */}
                         <div className="log-con">
-                            <FaUser />
-                            Login
+                            <Link to="/login">
+                                <FaUser />
+                                Login
+                            </Link>
                         </div>
                         {/* logo connexion */}
 

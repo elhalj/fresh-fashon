@@ -6,6 +6,9 @@ import Acceuil from './pages/home/acceuil.page';
 import Catalogue from './pages/catalogue/catalogue';
 import { useMemo } from 'react';
 import Footer from './pages/footer/foot';
+import CatalogueId from './pages/catalogue/CatalogueId';
+import SignUp from './pages/signUp/SignUp';
+import Login from './pages/login/Login';
 
 
 
@@ -24,6 +27,18 @@ function App() {
         {
           path:'catalogue',
           element: <Catalogue />,
+        },
+        {
+          path:'catalogue/:id',
+          element: <CatalogueId />,
+        },
+        {
+          path:'login',
+          element: <Login />,
+        },
+        {
+          path:'signUp',
+          element: <SignUp />,
         }
       ]
     }
