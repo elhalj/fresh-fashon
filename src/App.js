@@ -1,6 +1,6 @@
 
-import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
-import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+// import './App.css';
 import HomePage from './pages/home/home.page';
 import Acceuil from './pages/home/acceuil.page';
 import Catalogue from './pages/catalogue/catalogue';
