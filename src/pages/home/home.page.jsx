@@ -1,7 +1,5 @@
 import ControlledCarousel from '../../components/carrousel';
-import Banier from '../banniere/banier';
-import Footer from '../footer/foot';
-import Acceuil from './acceuil.page';
+import Categorie from '../banniere/categories';
 import './home.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -59,7 +57,7 @@ function HomePage() {
                         <div className="Tcard3" style={{textAlign:"center", alignContent:"center"}}><a href=""><img src="https://thumbs.dreamstime.com/b/mod%C3%A8le-caucasien-s-r-de-forme-physique-dans-des-mains-debout-de-v%C3%AAtements-de-sport-noirs-sur-des-hanches-regardant-l-appareil-93312216.jpg" alt="" style={{height:"400px", width:"400px"}}/></a></div>
                     </div>
                 </div>
-                <Banier />
+                <Categorie />
             </main>
         </>
     );

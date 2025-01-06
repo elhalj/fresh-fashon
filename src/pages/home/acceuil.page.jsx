@@ -2,10 +2,10 @@ import { Link, NavLink, Outlet } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 import { FaBasketShopping } from "react-icons/fa6";
-import HomePage from "./home.page";
 import Footer from "../footer/foot";
 import { useState } from "react";
 import Homeproducts from "../../utils/img";
+import Header from "../../components/Header";
 // import { useState } from "react";
 // import Container from 'react-bootstrap/Container';
 // import Row from 'react-bootstrap/Row';
@@ -33,21 +33,17 @@ function Acceuil() {
     return (
         <>
 
-            {/* <Container fluid>
-                <Row>
-                    <Col></Col>
-                </Row>
-            </Container> */}
+            
             <header className="NavLink">
                 <nav>
                     <div className='Lien'>
                         <div className='Logo'><a href="/"><img src="https://freevector-images.s3.amazonaws.com/uploads/vector/preview/30757/free-vector-globe-logo-concept.jpg" alt="fresh" /></a></div>
                         <ul>
                             {/* <li><NavLink to='/home'>Home</NavLink></li> */}
-                            <li><Link to='/catalogue'>Catalogue</Link></li>
-                            <li><NavLink to='#'>Femme</NavLink></li>
-                            <li><NavLink to='#'>Enfant</NavLink></li>
-                            <li><NavLink to='#'>Autre categorie</NavLink></li>
+                            <li><Link to='/'>HOME</Link></li>
+                            <li><NavLink to='/catalogue'>CATALOGUE</NavLink></li>
+                            <li><NavLink to='#'>SHOP</NavLink></li>
+                            <li><NavLink to='#'>CONTACT</NavLink></li>
                         </ul>
                     </div>
                     <div className="Search">
@@ -75,6 +71,7 @@ function Acceuil() {
             </header>
             {/* <HomePage/> */}
             {/* <Footer /> */}
+            <Header />
             <Outlet />
             <Footer />
         </>

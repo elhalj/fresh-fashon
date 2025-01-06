@@ -3,8 +3,6 @@ import './catalogue.css';
 
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import Banier from '../banniere/banier'
-import Footer from '../footer/foot'
 import Homeproducts from '../../utils/img';
 import { IoMdAddCircle } from "react-icons/io";
 import { FaMinusCircle } from "react-icons/fa";
@@ -22,6 +20,9 @@ export default function Catalogue() {
         const filteredProducts = Homeproducts.filter(product => product.nom === nom);
         setProducts(filteredProducts);
     }
+    const allProducts = () => {
+        setProducts(Homeproducts);
+    }
     const { id, image } = useParams();
     return (
 
@@ -32,15 +33,15 @@ export default function Catalogue() {
 
                         <div className="all">
                             <h3>All</h3>
-                            <input type="checkbox" name='all' />
+                            <input onClick={() => allProducts()} type="checkbox" name='all' />
                         </div>
                         <div className="all">
                             <h3>tee-shirt</h3>
-                            <input onClick={() => filter("tee-shirt")} type="checkbox" name='all' />
+                            <input onClick={() => filter("tee-shirt")} type="checkbox" name='tee-shirt' />
                         </div>
                         <div className="all">
                             <h3>chaussures</h3>
-                            <input onClick={() => filter("chaussure")} type="checkbox" name='all' />
+                            <input onClick={() => filter("chaussure")} type="checkbox" name='chaussure' />
                         </div>
                     </div>
                 </div>
@@ -53,7 +54,7 @@ export default function Catalogue() {
                                     <p>{product.type}</p>
                                 </Link>
                                 <div>
-                                    <FaMinusCircle style={{ cursor: "pointer" }} onClick={() => setQuantity(prev => prev - 1)} /><p>{quantity}</p><IoMdAddCircle style={{ cursor: "pointer" }} onClick={() => setQuantity(prev => prev + 1)} />
+                                    <FaMinusCircle style={{ cursor: "pointer" }} onClick={() => setQuantity(prev => prev[product.id] - 1)} /><p>{quantity}</p><IoMdAddCircle style={{ cursor: "pointer" }} onClick={() => setQuantity(prev => prev + 1)} />
                                 </div>
                             </div>
                         ))}

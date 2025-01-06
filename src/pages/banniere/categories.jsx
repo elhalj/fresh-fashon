@@ -1,10 +1,10 @@
 import Homeproducts from '../../utils/img';
-import './banier.css'
+import './categories.css'
 
 
 import React, { useState } from 'react'
 
-export default function Banier({fil}) {
+export default function Categorie({fil}) {
 
     const [trending, setTrending] = useState(Homeproducts);
 

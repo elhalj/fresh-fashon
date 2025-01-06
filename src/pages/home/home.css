@@ -9,7 +9,7 @@
     /* position: fixed; */
     z-index: 10;
     position: sticky;
-    top: 1px;
+    top: 63px;
 
     nav {
         width: 100%;
