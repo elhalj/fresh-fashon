@@ -10,6 +10,9 @@ import CatalogueId from './pages/catalogue/CatalogueId';
 import SignUp from './pages/signUp/SignUp';
 import Login from './pages/login/Login';
 import Panier from './components/Panier';
+import Cart from './pages/cart/Cart';
+import Commande from './pages/command/Commande';
+import Verify from './pages/vue/Verify';
 
 
 
@@ -28,10 +31,24 @@ function App() {
         {
           path:'catalogue',
           element: <Catalogue />,
+          children:[
+            {
+              path:':productId',
+              element:<Catalogue />
+            }
+          ]
         },
         {
-          path:'catalogue/:id',
-          element: <CatalogueId />,
+          path:'cart',
+          element: <Cart />
+        },
+        {
+          path:'commande',
+          element: <Commande />
+        },
+        {
+          path:'verify',
+          element: <Verify />
         },
         {
           path:'login',

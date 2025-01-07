@@ -19,7 +19,7 @@ function Acceuil() {
     //     setRechercher(recherche)
     // }
     const [trending, setTrending] = useState(Homeproducts);
-
+    const [isActive, setIsActive] = useState("HOME");// HOME, CATALOGUE, SHOP, CONTACT
     // filterCate
 
     const filterCate = (e) => {
@@ -40,10 +40,10 @@ function Acceuil() {
                         <div className='Logo'><a href="/"><img src="https://freevector-images.s3.amazonaws.com/uploads/vector/preview/30757/free-vector-globe-logo-concept.jpg" alt="fresh" /></a></div>
                         <ul>
                             {/* <li><NavLink to='/home'>Home</NavLink></li> */}
-                            <li><Link to='/'>HOME</Link></li>
-                            <li><NavLink to='/catalogue'>CATALOGUE</NavLink></li>
-                            <li><NavLink to='#'>SHOP</NavLink></li>
-                            <li><NavLink to='#'>CONTACT</NavLink></li>
+                            <li><Link to='/' onClick={() => setIsActive("HOME")} className={isActive ==="HOME" ? "active-link" : ""}>HOME</Link></li>
+                            <li><NavLink to='/catalogue' onClick={() => setIsActive("CATALOGUE")} className={isActive ==="CATALOGUE" ? "active-link" : ""}>CATALOGUE</NavLink></li>
+                            <li><NavLink to='#' onClick={() => setIsActive("SHOP")} className={isActive ==="SHOP" ? "active-link" : ""}>SHOP</NavLink></li>
+                            <li><NavLink to='#' onClick={() => setIsActive("CONTACT")} className={isActive ==="CONTACT" ? "active-link" : ""}>CONTACT</NavLink></li>
                         </ul>
                     </div>
                     <div className="Search">
