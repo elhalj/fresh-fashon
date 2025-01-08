@@ -7,22 +7,20 @@ import { IoMdAddCircle } from "react-icons/io";
 import { FaMinusCircle } from "react-icons/fa";
 
 export default function Catalogue() {
-    const { Homeproducts, cardItems, addToCard, removeToCard } = useContext(ShopContext);
-    const [products, setProducts] = useState();
+    const { product, cardItems, addToCard, removeToCard } = useContext(ShopContext);
+    const [produits, setProduits] = useState();
 
     // filtrer les produits par nom
     const filter = (nom) => {
-        const filteredProducts = Homeproducts.filter(
-            (product) => product.nom === nom
+        const filteredProducts = product.filter(
+            (products) => products.nom === nom
         );
-        setProducts(filteredProducts);
+        setProduits(filteredProducts);
     };
     // filtrer les produits par categorie
     const allProducts = () => {
-        setProducts(Homeproducts);
+        setProduits(product);
     };
-
-    const {product} = useParams();
 
     return (
         <>
@@ -53,23 +51,23 @@ export default function Catalogue() {
                 </div>
                 <div className="barniereDroit">
                     <div id="allProdcut" className="contenant">
-                        {Homeproducts.map((product) => (
-                            <div key={product.id} className="content">
-                                <Link to={`/product/${product.id}`}>
-                                    <img src={product.image} alt={product.nom} />
+                        {product.map((produits) => (
+                            <div key={produits.id} className="content">
+                                <Link to={`/product/${produits.id}`}>
+                                    <img src={produits.image} alt={produits.name} />
                                 </Link>
 
-                                <h2>{product.nom}</h2>
-                                <p>{product.type}</p>
+                                <h2>{produits.name}</h2>
+                                <p>{produits.category}</p>
 
                                 <div>
-                                    {!cardItems[product.id] ? (
-                                        <IoMdAddCircle onClick={() => addToCard(product.id)} />
+                                    {!cardItems[produits.id] ? (
+                                        <IoMdAddCircle onClick={() => addToCard(produits.id)} />
                                     ) : (
                                         <div>
-                                            <FaMinusCircle onClick={() => removeToCard(product.id)} />
-                                            <p>{cardItems[product.id]}</p>
-                                            <IoMdAddCircle onClick={() => addToCard(product.id)} />
+                                            <FaMinusCircle onClick={() => removeToCard(produits.id)} />
+                                            <p>{cardItems[produits.id]}</p>
+                                            <IoMdAddCircle onClick={() => addToCard(produits.id)} />
                                         </div>
                                     )}
                                 </div>

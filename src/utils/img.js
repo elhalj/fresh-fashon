@@ -1,54 +1,173 @@
 // import { type } from "@testing-library/user-event/dist/type";
+// product
+import garcon1 from "./assets/image/g1.jpg"
+import garcon2 from "./assets/image/g2.avif"
+import garcon3 from "./assets/image/g3.jpg"
+import garcon4 from "./assets/image/g4.jpg"
+import garcon5 from "./assets/image/g5.png"
+import fille1 from "./assets/image/f1.jpg"
+import fille2 from "./assets/image/f2.png"
+import fille3 from "./assets/image/f3.jpg"
+import fille4 from "./assets/image/f4.png"
+import fille5 from "./assets/image/f5.png"
+import fille6 from "./assets/image/f6.png"
+import fille7 from "./assets/image/f7.jpg"
 
-const Homeproducts = [
+// category
+import Chaussure from "./assets/image/chaussures.jpg"
+import Pantalon from "./assets/image/pentl1.jpeg"
+import TeeShirt from "./assets/image/teshirt.avif"
+import Television from "./assets/image/tele.jpg"
+import Casque from "./assets/image/premium_photo-1679513691474-73102089c117.jpeg"
+import Ordinateur from "./assets/image/ordiPortable.webp"
+import Jouets from "./assets/image/jouet.jpeg"
+import Portable from "./assets/image/port.webp"
+
+const category = [
     {
-        id:1,
-        nom:"chaussure",
-        type:"top",
-        image:"https://media.istockphoto.com/id/1279108197/fr/photo/vari%C3%A9t%C3%A9-de-chaussures-confortables-de-mode-de-femmes-de-toutes-saisons-sur-un-fond-l%C3%A9ger-vue.jpg?s=612x612&w=0&k=20&c=UZqf007bciqUY_KI1kC1v3yGwrM_ZvWZvla0moau7vQ="
+        category:"Chaussure",
+        image:Chaussure
     },
     {
-        id:2,
-        nom:"pentalon",
-        type:"top",
-        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6tEBSVesWZTub3sSgj4xuVcAu9BMFQC5HGA&s"
+        category:"Pantalon",
+        image:Pantalon
     },
     {
-        id:3,
-        nom:"tee-shirt",
-        type:"top",
-        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8CDtmGvcBCW5nor0OTBoUepVhtu82U7NnrA&s"
+        category:"TeeShirt",
+        image:TeeShirt
     },
     {
-        id:4,
-        nom:"television",
-        type:"new",
-        image:"https://media.istockphoto.com/id/1395191574/fr/photo/noir-led-tv-%C3%A9cran-de-t%C3%A9l%C3%A9vision-vierge-isol%C3%A9.jpg?s=612x612&w=0&k=20&c=e0CTyOK3YOg9VVdc1bvW0yq7rBhPZ0LkIPGXDZFCfR4="
+        category:"Television",
+        image:Television
     },
     {
-        id:5,
-        nom:"casque",
-        type:"feature",
-        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqXH6ghQNWGvhfQMAtgHt21Up4BcQz4P2nMg&s"
+        category:"Casque",
+        image:Casque
     },
     {
-        id:6,
-        nom:"ordinateur",
-        type:"top",
-        image:"https://im.qccdn.fr/node/decryptage-pc-de-bureau-ordinateur-portable-ou-tablette-quel-ordinateur-pour-tous-les-jours-2189/thumbnail_1000x600px-124338.jpg"
+        category:"Ordinateur",
+        image:Ordinateur
     },
     {
-        id:7,
-        nom:"jouets",
-        type:"new",
-        image:"https://img.20mn.fr/zpD-fHw4RGCTBBg61n05KA/1444x920_profitez-meilleures-promos-redoute-jouets-cadeaux-noel-enfants"
+        category:"Jouets",
+        image:Jouets
     },
     {
-        id:8,
-        nom:"portable",
-        type:"new",
-        image:"https://sodishop.bmperp.com/assets/uploads/produits/telephone-portable-smartphone-samsung-galaxy-a23-4-go-de-ram-64-go-de-stockage-ma0016-338199.jpg"
+        category:"Portable",
+        image:Portable
     },
 ]
 
-export default Homeproducts;
+
+export const product = [
+    {
+        id:1,
+        name:"pull et short",
+        image:garcon1,
+        price:3000,
+        category:"TeeShirt",
+        description:"pull et short pour garcon",
+        stock:10,
+    },
+    {
+        id:2,
+        name:"complet short et t-shirt",
+        image:garcon2,
+        price:2500,
+        category:"TeeShirt",
+        description:"complet short et t-shirt pour garcon",
+        stock:10,
+    },
+    {
+        id:3,
+        name:"complet jacket et pantalon",
+        image:garcon3,
+        price:4000,
+        category:"Pantalon",
+        description:"complet jacket et pantalon pour garcon",
+        stock:10,
+    },
+    {
+        id:4,
+        name:"complet ",
+        image:garcon4,
+        price:2000,
+        category:"TeeShirt",
+        description:"complet pour garcon",
+        stock:10,
+    },
+    {
+        id:5,
+        name:"complet short et haut",
+        image:garcon5,
+        price:5000,
+        category:"Pantalon",
+        description:"complet short et haut pour garcon",
+        stock:10,
+    },
+    {
+        id:6,
+        name:"protege corps",
+        image:fille1,
+        price:3000,
+        category:"TeeShirt",
+        description:"protege corps pour fille",
+        stock:10,
+    },
+    {
+        id:7,
+        name:"mini jupe",
+        image:fille2,
+        price:1000,
+        category:"Pantalon",
+        description:"mini jupe pour fille",
+        stock:10,
+    },
+    {
+        id:8,
+        name:"pijama",
+        image:fille3,
+        price:1600,
+        category:"TeeShirt",
+        description:"pijama pour fille",
+        stock:10,
+    },
+    {
+        id:9,
+        name:"pull tendance",
+        image:fille4,
+        price:8000,
+        category:"TeeShirt",
+        description:"pull contre le froid extreme",
+        stock:10,
+    },
+    {
+        id:10,
+        name:"tendance complet",
+        image:fille5,
+        price:3000,
+        category:"TeeShirt",
+        description:"tendance complet pour fille",
+        stock:10,
+    },
+    {
+        id:11,
+        name:"robe",
+        image:fille6,
+        price:10000,
+        category:"TeeShirt",
+        description:"mini robe de couleur rouge pour les sorties",
+        stock:10,
+    },
+    {
+        id:12,
+        name:"robe",
+        image:fille7,
+        price:9000,
+        category:"TeeShirt",
+        description:"mini robe de couleur kaki",
+        stock:10,
+    },
+]
+
+export default category;

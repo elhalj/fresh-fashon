@@ -6,15 +6,15 @@ import React, { useContext, useState } from 'react'
 
 export default function Categorie() {
 
-    const {Homeproducts} = useContext(ShopContext);
+    const {category} = useContext(ShopContext);
 
-    const [trending, setTrending] = useState(Homeproducts);
+    const [trending, setTrending] = useState(category);
 
     // filterCate
 
     const filterCate = (x) => {
-        const filterProduct = Homeproducts.filter(curEl => {
-            return curEl.type === x
+        const filterProduct = category.filter(curEl => {
+            return curEl.category === x
         })
         setTrending(filterProduct);
     }
@@ -22,7 +22,7 @@ export default function Categorie() {
     
 
     const allTrending = () => {
-        setTrending(Homeproducts)
+        setTrending(category)
     }
     return (
         <div className="trending">
@@ -32,9 +32,14 @@ export default function Categorie() {
                         <div className="navi">
                             <h1>trending</h1>
                             <div className="navi-trending">
-                                <p onClick={() => filterCate("top")}>top</p>
-                                <p onClick={() => filterCate("new")}>new</p>
-                                <p onClick={() => filterCate("feature")}>feature</p>
+                                <p onClick={() => filterCate("Chaussure")}>Chaussure</p>
+                                <p onClick={() => filterCate("TeeShirt")}>TeeShirt</p>
+                                <p onClick={() => filterCate("Television")}>Televison</p>
+                                <p onClick={() => filterCate("Pantalon")}>Pantalon</p>
+                                <p onClick={() => filterCate("Casque")}>Casque</p>
+                                <p onClick={() => filterCate("Ordinateur")}>Ordinateur</p>
+                                <p onClick={() => filterCate("Jouets")}>Jouet</p>
+                                <p onClick={() => filterCate("Portable")}>Portable</p>
                                 <p onClick={() => allTrending()}>allCategorie</p>
                             </div>
                         </div>
@@ -47,8 +52,7 @@ export default function Categorie() {
                                                 <img src={curEl.image} alt={curEl.nom} />
                                             </div>
                                             <div className="text">
-                                                <h2>{curEl.nom}</h2>
-                                                <p>{curEl.type}</p>
+                                                <h2>{curEl.category}</h2>
                                                 <button type='submit'>VOIR</button>
                                             </div>
                                         </div>

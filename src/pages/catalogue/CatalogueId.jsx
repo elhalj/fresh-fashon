@@ -4,14 +4,15 @@ import { ShopContext } from "../../context/ShoppingContext";
 import Produit from "./Produit";
 
 const CatalogueId = () => {
-  const { Homeproducts } = useContext(ShopContext);
+  const { product } = useContext(ShopContext);
   const { productId } = useParams();
   console.log(productId);
 
-  const produit = Homeproducts.find((product) => product.id === productId);
+  const produit = product.find((e) => e.id === productId);
   if (!produit) {
     return <div>Product not found</div>;
     }
+    console.log(produit)
   // const { Homeproducts } = useContext(ShopContext);
   
   // let { id } = useParams();
