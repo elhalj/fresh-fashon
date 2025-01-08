@@ -6,6 +6,7 @@ import Footer from "../footer/foot";
 import { useState } from "react";
 import Homeproducts from "../../utils/img";
 import Header from "../../components/Header";
+import logo from './images.jpeg';
 // import { useState } from "react";
 // import Container from 'react-bootstrap/Container';
 // import Row from 'react-bootstrap/Row';
@@ -37,7 +38,7 @@ function Acceuil() {
             <header className="NavLink">
                 <nav>
                     <div className='Lien'>
-                        <div className='Logo'><a href="/"><img src="https://freevector-images.s3.amazonaws.com/uploads/vector/preview/30757/free-vector-globe-logo-concept.jpg" alt="fresh" /></a></div>
+                        <div className='Logo'><a href="/"><img src={logo} alt="fresh" /></a></div>
                         <ul>
                             {/* <li><NavLink to='/home'>Home</NavLink></li> */}
                             <li><Link to='/' onClick={() => setIsActive("HOME")} className={isActive ==="HOME" ? "active-link" : ""}>HOME</Link></li>

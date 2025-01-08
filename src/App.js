@@ -5,7 +5,6 @@ import HomePage from './pages/home/home.page';
 import Acceuil from './pages/home/acceuil.page';
 import Catalogue from './pages/catalogue/catalogue';
 import { useMemo } from 'react';
-import Footer from './pages/footer/foot';
 import CatalogueId from './pages/catalogue/CatalogueId';
 import SignUp from './pages/signUp/SignUp';
 import Login from './pages/login/Login';
@@ -13,6 +12,7 @@ import Panier from './components/Panier';
 import Cart from './pages/cart/Cart';
 import Commande from './pages/command/Commande';
 import Verify from './pages/vue/Verify';
+import Homeproducts from './utils/img';
 
 
 
@@ -23,52 +23,51 @@ function App() {
       path: "/",
       element: <Acceuil />,
       exact: true,
-      children:[
+      children: [
         {
-          path:'/',
-          element:<HomePage />
+          path: '/',
+          element: <HomePage />
         },
         {
-          path:'catalogue',
-          element: <Catalogue />,
-          children:[
-            {
-              path:':productId',
-              element:<Catalogue />
-            }
-          ]
+          path: 'catalogue',
+          element: <Catalogue Homeproducts={Homeproducts} />,
         },
         {
-          path:'cart',
+          path: 'product/:id',
+          element: <CatalogueId />
+        }
+        ,
+        {
+          path: 'cart',
           element: <Cart />
         },
         {
-          path:'commande',
+          path: 'commande',
           element: <Commande />
         },
         {
-          path:'verify',
+          path: 'verify',
           element: <Verify />
         },
         {
-          path:'login',
+          path: 'login',
           element: <Login />,
         },
         {
-          path:'signUp',
+          path: 'signUp',
           element: <SignUp />,
         },
         {
-          path:'panier',
-          element:<Panier />
+          path: 'panier',
+          element: <Panier />
         }
       ]
     }
-  ]),[])
+  ]), [])
   return (
-    
-      <RouterProvider router={router} />
-    
+
+    <RouterProvider router={router} />
+
   );
 }
 

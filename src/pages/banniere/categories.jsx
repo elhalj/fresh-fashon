@@ -1,10 +1,12 @@
-import Homeproducts from '../../utils/img';
+import { ShopContext } from '../../context/ShoppingContext';
 import './categories.css'
 
 
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 
-export default function Categorie({fil}) {
+export default function Categorie() {
+
+    const {Homeproducts} = useContext(ShopContext);
 
     const [trending, setTrending] = useState(Homeproducts);
 
@@ -36,10 +38,10 @@ export default function Categorie({fil}) {
                                 <p onClick={() => allTrending()}>allCategorie</p>
                             </div>
                         </div>
-                        <div className="cat">
+                        <div id='categorie' className="cat">
                             {trending.map(curEl => {
                                 return (
-                                    <div key={curEl.id} className="content" >
+                                    <div id={curEl.id} key={curEl.id} className="content" >
                                         <div>
                                             <div className="im">
                                                 <img src={curEl.image} alt={curEl.nom} />
