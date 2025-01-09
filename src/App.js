@@ -12,7 +12,7 @@ import Panier from './components/Panier';
 import Cart from './pages/cart/Cart';
 import Commande from './pages/command/Commande';
 import Verify from './pages/vue/Verify';
-import Homeproducts from './utils/img';
+import { product } from './utils/img';
 
 
 
@@ -30,10 +30,10 @@ function App() {
         },
         {
           path: 'catalogue',
-          element: <Catalogue Homeproducts={Homeproducts} />,
+          element: <Catalogue Homeproducts={product} />,
         },
         {
-          path: 'product/:id',
+          path: 'catalogueId/:id',
           element: <CatalogueId />
         }
         ,

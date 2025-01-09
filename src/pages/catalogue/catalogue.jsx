@@ -22,6 +22,8 @@ export default function Catalogue() {
         setProduits(product);
     };
 
+    const { id } = useParams();
+
     return (
         <>
             <div className="contenu">
@@ -50,10 +52,10 @@ export default function Catalogue() {
                     </div>
                 </div>
                 <div className="barniereDroit">
-                    <div id="allProdcut" className="contenant">
+                    <div id="product" className="contenant">
                         {product.map((produits) => (
                             <div key={produits.id} className="content">
-                                <Link to={`/product/${produits.id}`}>
+                                <Link to={`/catalogueId/${produits.id}`}>
                                     <img src={produits.image} alt={produits.name} />
                                 </Link>
 

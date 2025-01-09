@@ -46,7 +46,7 @@ export default function Categorie() {
                         <div id='categorie' className="cat">
                             {trending.map(curEl => {
                                 return (
-                                    <div id={curEl.id} key={curEl.id} className="content" >
+                                    <div id={curEl.id} key={curEl.category} className="content" >
                                         <div>
                                             <div className="im">
                                                 <img src={curEl.image} alt={curEl.nom} />

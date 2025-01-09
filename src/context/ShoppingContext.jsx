@@ -11,6 +11,7 @@ export const ShopContext = createContext(null);
 const ShoppingContextProvider = (props) => {
 
     const [cardItems, setCardItems] = useState({});
+
     const addToCard = (itemId) => {
         if (!cardItems[itemId]) {
             setCardItems((prev) => ({ ...prev, [itemId]: 1 }))
@@ -25,15 +26,16 @@ const ShoppingContextProvider = (props) => {
     const getTotalItems = () => {
         let  total = 0;
         for(const item of cardItems){
-            let infodItem = product.find((product) => product.id === item);
+            let infodItem = product.find((e) => e.id === item);
             total += infodItem.prix * cardItems[item];
         }
         return total;
     }
 
-    useEffect(() => {
-        console.log(cardItems)
-    }, [cardItems])
+    // useEffect(() => {
+    //     // console.log(cardItems)
+    //     setCardItems(cardItems)
+    // }, [cardItems])
 
     const contextValue = { category, product, cardItems, setCardItems, addToCard, removeToCard, getTotalItems }
 

@@ -27,14 +27,13 @@ function SignUp() {
             const response = await axios.post("http://localhost:5000/api/inscription", formdata);
 
             // Vérifier si JSON valide
-            if (response.data && response.data.user_id) {
-                
-                 // Rediriger vers la page de connexion
-                console.log("Inscription réussie");
-                setSuccessMessage("Inscription réussie");
-            }else{
+            if (!response.data && response.data.user_id) {
                 console.log("Erreur d'inscription");
                 setErrorMessage("Erreur d'inscription");
+                 // Rediriger vers la page de connexion
+            }else{
+                console.log("Inscription réussie");
+                setSuccessMessage("Inscription réussie");
             }
             navigate("/login");
         } catch (error) {

@@ -46,6 +46,9 @@ function Login(){
 
         } catch (error) {
             console.log(error.message);
+            console.log("utilisateur inconnu")
+
+
         }
     };
 
@@ -74,8 +77,9 @@ function Login(){
             </label>
 
             <button type='submit' onClick={handleSubmit}>Login</button>
-            {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
-            {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
+            {!errorMessage ?(<p style={{ color: 'green' }}>{successMessage}</p>) : (<p style={{ color: 'red' }}>{errorMessage}</p>)}
+            {/* {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+            {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>} */}
             <h4>you don't have a account ? <Link to="/signUp">register</Link></h4>
         </form>
       </div>

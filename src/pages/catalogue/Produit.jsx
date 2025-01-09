@@ -1,15 +1,15 @@
 import React from 'react'
 
-const Produit = ({product}) => {
+const Produit = () => {
   return (
-    <div>
+    <div style={{marginTop:"100px"}}>
       {/* const { Homeproducts } = useContext(ShopContext);
   
   let { id } = useParams();
   console.log(id)
   const product = Homeproducts.find(product => product.id === id);
   console.log(product) */}
-       home {product.nom}
+       <p>home </p>
       
     </div>
   )
