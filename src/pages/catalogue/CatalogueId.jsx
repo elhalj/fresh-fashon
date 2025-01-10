@@ -5,21 +5,13 @@ import Produit from "./Produit";
 
 const CatalogueId = () => {
   const { product } = useContext(ShopContext);
-  const { productId } = useParams();
-  console.log(productId);
+  const { id } = useParams();
+  // console.log(id);
 
-  const produit = () => {
-    try {
-      const res = product.find((e) => e.id === productId);
-      if(!res){
-        console.log("rien trouver")
-      }
-      console.log(res);
-    } catch (error) {
-      console.log(error.message)
-    }
-  }
-  if (!produit()) {
+  const produit = product.find((e) => e.id === parseInt(id));
+  console.log(produit)
+      
+  if (!produit) {
     return <div style={{marginTop:"100px", textAlign:"center", fontSize:"60px"}}>Product not found</div>;
   }
   
@@ -31,8 +23,8 @@ const CatalogueId = () => {
   return (
     <div>
       <h1>Produit</h1>
-
-      <Produit  />
+      
+      <Produit prod={produit} />
     </div>
   );
 };

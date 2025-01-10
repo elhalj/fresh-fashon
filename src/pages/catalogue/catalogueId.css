@@ -1,3 +1,65 @@
-.product{
-    margin-top: 50px;
+.prod{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.prod .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+}
+
+.prod .box h3 {
+    margin-bottom: 60px;
+    /* box-shadow: 1px 2px 1px rgb(194, 181, 181); */
+    filter: drop-shadow(1px 2px 1px black);
+    -webkit-filter: drop-shadow(1px 2px 1px black);
+}
+
+.prod .box div {
+    font-size: 20px;
+}
+
+.prod .box .qbuttons {
+    display: flex;
+    width: 120px;
+    padding: 10px;
+    background-color: antiquewhite;
+    justify-content: space-around;
+    align-items: center;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.prod img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    /* border: 1px dotted red; */
+    box-shadow: 1px 2px 1px black;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.prod .box .moins {
+    font-size: 30px;
+}
+.prod .box .plus {
+    font-size: 35px;
+    color: orange;
+}
+
+@media (max-width: 800px){
+    .prod{
+        flex-direction: column;
+    }
 }

@@ -32,12 +32,19 @@ const ShoppingContextProvider = (props) => {
         return total;
     }
 
-    // useEffect(() => {
-    //     // console.log(cardItems)
-    //     setCardItems(cardItems)
-    // }, [cardItems])
+    const totalItem  = () => {
+        let total = 0;
+        for (const id in cardItems) {
+        total += cardItems[id];
+        }
+        return total;
+      }
 
-    const contextValue = { category, product, cardItems, setCardItems, addToCard, removeToCard, getTotalItems }
+    useEffect(() => {
+        console.log(cardItems)
+    }, [cardItems])
+
+    const contextValue = { category, product, cardItems, setCardItems, addToCard, removeToCard, getTotalItems, totalItem }
 
     return (
         <ShopContext.Provider value={contextValue}>
