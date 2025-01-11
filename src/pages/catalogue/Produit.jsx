@@ -5,7 +5,7 @@ import { FaMinusCircle } from "react-icons/fa";
 import { ShopContext } from "../../context/ShoppingContext";
 
 const Produit = ({ prod }) => {
-  const { addToCard, removeToCard, cardItems, getTotalItems, totalItem } = useContext(ShopContext);
+  const { addToCard, removeToCard, cardItems,} = useContext(ShopContext);
 
   const handleAddToCard = () => {
     addToCard(prod);
@@ -65,10 +65,6 @@ const Produit = ({ prod }) => {
             </div>
           )}
         </div>
-      </div>
-      <div className="add">
-        <button type="submit" onClick={() => handleAddToCard(prod.id)}>Ajouter</button>
-        <p>{totalItem(prod.id)}</p>
       </div>
     </>
   );

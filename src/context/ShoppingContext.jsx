@@ -25,9 +25,13 @@ const ShoppingContextProvider = (props) => {
 
     const getTotalItems = () => {
         let  total = 0;
-        for(const item of cardItems){
-            let infodItem = product.find((e) => e.id === item);
-            total += infodItem.prix * cardItems[item];
+        for(const item in cardItems){
+            if(cardItems[item] > 0){
+                let infoItem = product.find((e) => e.id === parseInt(item));
+                if(infoItem){
+                    total += infoItem.price * cardItems[item];
+                }
+            }
         }
         return total;
     }
