@@ -87,3 +87,8 @@
 .total h2:hover{
     background-color: rgba(153, 102, 6, 0.945);
 }
+
+.total h2 a{
+    text-decoration: none;
+    color: black;
+}

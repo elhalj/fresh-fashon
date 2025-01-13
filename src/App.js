@@ -46,10 +46,6 @@ function App() {
           element: <Commande />
         },
         {
-          path: 'verify',
-          element: <Verify />
-        },
-        {
           path: 'login',
           element: <Login />,
         },
@@ -60,7 +56,11 @@ function App() {
         {
           path: 'panier',
           element: <Panier />
-        }
+        },
+        {
+          path: 'panier/verify',
+          element: <Verify />
+        },
       ]
     }
   ]), [])

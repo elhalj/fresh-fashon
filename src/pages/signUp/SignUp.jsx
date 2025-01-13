@@ -46,22 +46,22 @@ function SignUp() {
       <div className="formulaire">
         <form /*onSubmit={handleSubmit}*/>
             <label htmlFor="nom">
-                <input type="text" name='nom' placeholder='nom' value={formdata.nom} onChange={handleChange} />
+                <input type="text" name='nom' placeholder='nom' value={formdata.nom} onChange={handleChange} required/>
             </label>
             <label htmlFor="prenom">
-                <input type="text" name='prenom' placeholder='prenom' value={formdata.prenom} onChange={handleChange} />
+                <input type="text" name='prenom' placeholder='prenom' value={formdata.prenom} onChange={handleChange} required/>
             </label>
             <label htmlFor="email">
-                <input type="email" name='email' placeholder='email' value={formdata.email} onChange={handleChange} />
+                <input type="email" name='email' placeholder='email' value={formdata.email} onChange={handleChange} required/>
             </label>
             <label htmlFor="telephone">
-                <input type="number" name='telephone' placeholder='telephone' value={formdata.telephone} onChange={handleChange} />
+                <input type="number" name='telephone' placeholder='telephone' value={formdata.telephone} onChange={handleChange} required/>
             </label>
             <label htmlFor="pasword">
-                <input type="password" name='password' placeholder='password' value={formdata.password} onChange={handleChange} />
+                <input type="password" name='password' placeholder='password' value={formdata.password} onChange={handleChange} required/>
             </label>
             <label htmlFor="address">
-                <input type="text" name='address' placeholder='address' value={formdata.address} onChange={handleChange} />
+                <input type="text" name='address' placeholder='address' value={formdata.address} onChange={handleChange} required/>
             </label>
 
             <button type='submit' onClick={handleSubmit}>SignUp</button>

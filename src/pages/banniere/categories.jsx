@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ShopContext } from '../../context/ShoppingContext';
 import './categories.css'
 
@@ -53,7 +54,7 @@ export default function Categorie() {
                                             </div>
                                             <div className="text">
                                                 <h2>{curEl.category}</h2>
-                                                <button type='submit'>VOIR</button>
+                                                <button type='submit'><Link to='catalogue'>VOIR</Link></button>
                                             </div>
                                         </div>
                                     </div>

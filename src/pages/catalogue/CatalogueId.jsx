@@ -21,8 +21,8 @@ const CatalogueId = () => {
   // console.log(id)
 
   return (
-    <div>
-      <h1>Produit</h1>
+    <div style={{marginTop:"100px", marginBottom:"100px"}}>
+      <h1 style={{textAlign:"center",boxShadow:"1px 2px 1px black"}}>Produit</h1>
       
       <Produit prod={produit} />
     </div>

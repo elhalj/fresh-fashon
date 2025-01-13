@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../../context/ShoppingContext";
 import { FaTrashCan } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function Cart() {
   const { cardItems, product, removeToCard, getTotalItems } = useContext(ShopContext);
@@ -31,13 +32,6 @@ function Cart() {
         return null;
       })}
     </div>
-
-
-    <div className="total">
-        <h1>Compte total</h1>
-            <p>{getTotalItems()} FCFA</p>
-            <h2>Payement</h2>
-      </div>
     </>
     
   );

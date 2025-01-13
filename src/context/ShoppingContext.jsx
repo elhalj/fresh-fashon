@@ -10,7 +10,10 @@ export const ShopContext = createContext(null);
 
 const ShoppingContextProvider = (props) => {
 
-    const [cardItems, setCardItems] = useState({});
+    const [cardItems, setCardItems] = useState(() => {
+        const storedCardItems = localStorage.getItem('cardItems');
+        return storedCardItems ? JSON.parse(storedCardItems) : {};
+    });
 
     const addToCard = (itemId) => {
         if (!cardItems[itemId]) {
@@ -45,6 +48,7 @@ const ShoppingContextProvider = (props) => {
       }
 
     useEffect(() => {
+        localStorage.setItem('cardItems', JSON.stringify(cardItems));//stocker les donnee dans la memoire de l'appareil de l'utilisateur pour eviter de les perdres lors du rechargement
         console.log(cardItems)
     }, [cardItems])
 

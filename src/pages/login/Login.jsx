@@ -63,7 +63,8 @@ function Login(){
                     placeholder='email'
                     autoFocus={true}
                     value={formdata.email} 
-                    onChange={handleChange} 
+                    onChange={handleChange}
+                    required 
                 />
             </label>
             <label htmlFor="pasword">
@@ -73,6 +74,7 @@ function Login(){
                     placeholder='password'
                     value={formdata.password} 
                     onChange={handleChange} 
+                    required
                 />
             </label>
 

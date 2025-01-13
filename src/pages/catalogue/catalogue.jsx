@@ -64,12 +64,12 @@ export default function Catalogue() {
 
                                 <div>
                                     {!cardItems[produits.id] ? (
-                                        <IoMdAddCircle onClick={() => addToCard(produits.id)} />
+                                        <IoMdAddCircle onClick={() => addToCard(produits.id)} style={{cursor:"pointer"}}/>
                                     ) : (
                                         <div>
-                                            <FaMinusCircle onClick={() => removeToCard(produits.id)} />
+                                            <FaMinusCircle onClick={() => removeToCard(produits.id)} style={{cursor:"pointer"}}/>
                                             <p>{cardItems[produits.id]}</p>
-                                            <IoMdAddCircle onClick={() => addToCard(produits.id)} />
+                                            <IoMdAddCircle onClick={() => addToCard(produits.id)} style={{cursor:"pointer"}}/>
                                         </div>
                                     )}
                                 </div>
