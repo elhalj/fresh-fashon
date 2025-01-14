@@ -27,22 +27,12 @@ export default function Categorie() {
     }
     return (
         <div className="trending">
-            <div className="container">
+            <div className="container-fluid">
                 <div className="box-left">
                     <div className="box">
                         <div className="navi">
                             <h1>trending</h1>
-                            <div className="navi-trending">
-                                <p onClick={() => filterCate("Chaussure")}>Chaussure</p>
-                                <p onClick={() => filterCate("TeeShirt")}>TeeShirt</p>
-                                <p onClick={() => filterCate("Television")}>Televison</p>
-                                <p onClick={() => filterCate("Pantalon")}>Pantalon</p>
-                                <p onClick={() => filterCate("Casque")}>Casque</p>
-                                <p onClick={() => filterCate("Ordinateur")}>Ordinateur</p>
-                                <p onClick={() => filterCate("Jouets")}>Jouet</p>
-                                <p onClick={() => filterCate("Portable")}>Portable</p>
-                                <p onClick={() => allTrending()}>allCategorie</p>
-                            </div>
+                           
                         </div>
                         <div id='categorie' className="cat">
                             {trending.map(curEl => {

@@ -8,27 +8,27 @@ export default function Footer() {
   return (
     <div>
       <div className="pied">
-        <div className="container">
+        <div className="containeer">
           <div className="box">
             <div className="about">
               <div className="row">
-                <div className='row1'><FaShippingFast /></div>
-                <div className="row2">
+                <div className='roow1'><FaShippingFast /></div>
+                <div className="roow2">
                   <h1>Fast delivery</h1>
                   <p>Lorem ipsum dolor sit .</p>
                 </div>
-                <div className='row1'><FaPiggyBank /></div>
-                <div className="row2">
+                <div className='roow1'><FaPiggyBank /></div>
+                <div className="roow2">
                   <h1>Great Saving</h1>
                   <p>Lorem ipsum dolor sit .</p>
                 </div>
-                <div className='row1'><SlEarphones /></div>
-                <div className="row2">
+                <div className='roow1'><SlEarphones /></div>
+                <div className="roow2">
                   <h1>24/7 Support</h1>
                   <p>Lorem ipsum dolor sit .</p>
                 </div>
-                <div className='row1'><FaWallet /></div>
-                <div className="row2">
+                <div className='roow1'><FaWallet /></div>
+                <div className="roow2">
                   <h1>Money back</h1>
                   <p>Lorem ipsum dolor sit .</p>
                 </div>

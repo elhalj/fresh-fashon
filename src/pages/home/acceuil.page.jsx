@@ -4,8 +4,6 @@ import { CiSearch } from "react-icons/ci";
 import { FaBasketShopping } from "react-icons/fa6";
 import Footer from "../footer/foot";
 import { useContext, useState } from "react";
-import Homeproducts from "../../utils/img";
-import Header from "../../components/Header";
 import logo from "./images.jpeg";
 import { ShopContext } from "../../context/ShoppingContext";
 // import { useState } from "react";
@@ -143,8 +141,6 @@ function Acceuil() {
             </header>
             {/* <HomePage/> */}
             {/* <Footer /> */}
-
-            <Header />
             <Outlet />
             <Footer />
         </>
