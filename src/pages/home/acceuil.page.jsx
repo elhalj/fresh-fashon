@@ -33,17 +33,18 @@ function Acceuil() {
 
     return (
         <>
-            <header className="NavLink">
-                <nav>
-                    <div className="Lien">
+            {/* NavLink Lien*/}
+            <header className="">
+                <nav className="flex flex-col md:flex-row md:justify-between md:flex-1 m-1 p-1">
+                    <div className="flex flex-col justify-center items-center md:flex-row md:justify-around md:flex-1 ">
                         <div className="Logo">
                             <a href="/">
-                                <img src={logo} alt="fresh" />
+                                <img src={logo} alt="fresh" className="h-[40px] w-[40px] object-cover"/>
                             </a>
                         </div>
-                        <ul>
+                        <ul className="flex flex-col md:flex-row md:justify-around md:flex-1 no-underline">
                             {/* <li><NavLink to='/home'>Home</NavLink></li> */}
-                            <li>
+                            <li className="decoration-0 liste-none">
                                 <Link
                                     to="/"
                                     onClick={() => setIsActive("HOME")}
@@ -52,7 +53,7 @@ function Acceuil() {
                                     HOME
                                 </Link>
                             </li>
-                            <li>
+                            <li className="decoration-0 liste-none">
                                 <NavLink
                                     to="/catalogue"
                                     onClick={() => setIsActive("CATALOGUE")}
@@ -61,7 +62,7 @@ function Acceuil() {
                                     CATALOGUE
                                 </NavLink>
                             </li>
-                            <li>
+                            <li className="decoration-0 liste-none">
                                 <NavLink
                                     to="#"
                                     onClick={() => setIsActive("SHOP")}
@@ -70,7 +71,7 @@ function Acceuil() {
                                     SHOP
                                 </NavLink>
                             </li>
-                            <li>
+                            <li className="decoration-0 liste-none">
                                 <NavLink
                                     to="#"
                                     onClick={() => setIsActive("CONTACT")}
@@ -81,12 +82,13 @@ function Acceuil() {
                             </li>
                         </ul>
                     </div>
-                    <div className="Search">
+                    <div className="Search flex">
                         <form action="">
                             <input
                                 type="text"
                                 placeholder="recherche article"
                                 onChange={handleSearch}
+                                className="bg-slate-100"
                             />
 
                             <div className="ser">
